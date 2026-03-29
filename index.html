@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>命を守る備えの優先順位診断</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <section id="start-screen" class="card">
+      <span class="badge">仮版プロトタイプ</span>
+      <h1>命を守る備えの優先順位診断</h1>
+      <p class="lead">
+        防災を「全部やらなきゃ」で終わらせず、あなたの生活条件から今いちばん優先すべきことを示します。
+      </p>
+      <button id="start-button" class="button primary">診断をはじめる</button>
+    </section>
+
+    <section id="question-screen" class="card hidden">
+      <div class="question-header">
+        <div>
+          <div class="muted">簡易診断</div>
+          <h2 id="question-title"></h2>
+          <p id="question-description" class="muted"></p>
+        </div>
+        <div id="step-label" class="badge"></div>
+      </div>
+
+      <div class="progress-wrap">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div id="question-options" class="options"></div>
+
+      <div class="actions">
+        <button id="prev-button" class="button secondary">前の質問へ</button>
+        <button id="next-button" class="button primary">次へ</button>
+      </div>
+    </section>
+
+    <section id="result-screen" class="hidden">
+      <div class="card">
+        <span class="badge">診断結果</span>
+        <h2 id="result-headline"></h2>
+        <p id="result-summary" class="lead"></p>
+      </div>
+
+      <div class="result-grid">
+        <div class="card">
+          <h3>命を守る流れの中での、あなたの現在地</h3>
+          <div id="phase-states" class="phase-list"></div>
+        </div>
+
+        <div class="card">
+          <h3>あなたの備えの優先順位</h3>
+          <div id="ranking-list" class="ranking-list"></div>
+        </div>
+      </div>
+
+      <div class="result-grid">
+        <div class="card">
+          <h3>今週やること</h3>
+          <div id="next-actions" class="action-list"></div>
+        </div>
+
+        <div class="card">
+          <h3>人数に応じた最低限の備えの目安</h3>
+          <div id="stockpile-guide" class="stockpile-box"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>あなたに合う学び・備え</h3>
+        <div id="recommendations" class="recommendation-list"></div>
+      </div>
+
+      <div class="actions">
+        <button id="restart-button" class="button secondary">もう一度診断する</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./questions.js"></script>
+  <script src="./resultMaster.js"></script>
+  <script src="./recommendations.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
