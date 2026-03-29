@@ -1,0 +1,2 @@
+# bousai-questionnaire
+災害時に命を守る備えの優先順位を診断する静的Webサイト
